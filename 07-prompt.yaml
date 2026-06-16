@@ -8,3 +8,5 @@
   - name: password
     prompt: "please enter password"
     private: true 
+  debug:
+  - msg: "username is {{username}} and password is {{pasword}}""
