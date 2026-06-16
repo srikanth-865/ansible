@@ -1,0 +1,11 @@
+- name: Demo on variables
+  hosts: localhost
+  connection: local
+  vars:
+    course: "Devops"
+    time: 2
+    trainer: "shiva"
+  tasks:
+    debug:
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+
