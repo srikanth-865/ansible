@@ -1,5 +1,5 @@
 - name: Demo on conditions
-  hosts: local
+  hosts: localhost
   connection: local
   vars:
    live_session: 6
