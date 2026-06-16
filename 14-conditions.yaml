@@ -2,10 +2,12 @@
   hosts: local
   connection: local
   tasks:
-  when: "ansible_facts.os_family == RedHat"
-  debug:
-    msg:" Os family is Redhat ,package manager is dnf"
-  when: "ansible_facts.os_family == Debian"
-  debug:
-    msg:" Os family is Redhat ,package manager is apt.get"
+  - name: Redhat check
+    when:  ansible_facts.os_family == "RedHat"
+    debug:
+      msg: " Os family is Redhat ,package manager is dnf"
+  - name: ubantu check
+    when: ansible_facts.os_family == "Debian"
+    debug:
+     msg: " Os family is Redhat ,package manager is apt.get"
     
