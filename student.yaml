@@ -1,0 +1,12 @@
+- name: "srikanth"
+  Dob: "2000-may-07"
+  mobile: "8977404843"
+  address:
+  -type: current
+    street: 101
+    apartment: "jampala"
+    city: "tirupat"
+  -type: permanent
+    street: 105
+    apartment: "pdp"
+    city: "kurnool"
