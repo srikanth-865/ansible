@@ -5,6 +5,6 @@
   - course.yaml
   tasks:
   - name: print information
-  debug:
-    msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+    debug:
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
