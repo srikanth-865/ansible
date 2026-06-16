@@ -1,0 +1,16 @@
+- name: give number is even or odd
+  hosts: local
+  connection: local
+  vars:
+   number: 6
+  task:
+  - name: printing even
+    when: number %2 == 0
+    debug:
+      msg: "its an even number {{number}}"
+  - name: printing odd
+    when: number %2!= 0
+    debug:
+      msg: "its an odd number {{number}}"
+      
+
