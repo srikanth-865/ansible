@@ -7,5 +7,5 @@
     trainer: "shiva"
   tasks:
   - debug:
-    msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
