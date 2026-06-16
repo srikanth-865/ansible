@@ -5,6 +5,7 @@
     course: "Devops"
     time: 2
     trainer: "shiva"
-- debug:
+  tasks:
+  - debug:
     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
