@@ -1,0 +1,16 @@
+- name: Demo on task level variables
+  hosts: localhost
+  connection: local
+  vars:
+    course: "Devops"
+    time: 2
+    trainer: "shiva"
+  tasks:
+  - name: print information
+  vars:
+    course: "Devsecops with aiops"
+    time: 2
+    trainer: "shiva"
+  debug:
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+
