@@ -1,5 +1,5 @@
 - name: Demo on variables with common file
-  hosts: local
+  hosts: localhost
   connection: local
   vars_files:
   - course.yaml
