@@ -1,4 +1,4 @@
-- name: demo on variable from Cmd
+- name : demo on variable from Cmd
   host: local
   connection: local
   tasks:
