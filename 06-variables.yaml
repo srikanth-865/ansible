@@ -4,6 +4,7 @@
   vars_files:
   - course.yaml
   tasks:
-  - debug:
+  - name: print the information
+    debug:
       msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
