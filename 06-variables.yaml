@@ -1,7 +1,7 @@
 - name: Demo on variables with common file
   hosts: local
   connection: local
-  variablefiles:
+  vars_files:
   - course.yaml
   tasks:
   - debug:
