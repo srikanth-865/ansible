@@ -11,4 +11,4 @@
   tasks:
   - name: print the information
     debug:
-      msg: "username is {{username}} and password is {{pasword}}"
+      msg: "username is: {{ username }} and password is :{{ pasword }}"
