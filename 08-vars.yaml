@@ -1,0 +1,7 @@
+- name: Demo on inventory vars file
+  hosts: local
+  connection: local
+  tasks:
+  - name: print information
+    debug:
+     msg:"myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}" 
