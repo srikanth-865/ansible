@@ -1,6 +1,6 @@
 - name: Demo on conditions
-  hosts: localhost
-  connection: local
+  hosts: frontend
+  # connection: local
   vars:
    live_session: 6
   tasks:
