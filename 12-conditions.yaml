@@ -3,7 +3,7 @@
   connection: local
   vars:
    number: 6
-  task:
+  tasks:
   - name: printing even
     when: number %2 == 0
     debug:
