@@ -1,5 +1,5 @@
-- name : demo on variable from Cmd
-  host: local
+- name: demo on variable from Cmd
+  hosts: local
   connection: local
   tasks:
   - name: print name
