@@ -7,8 +7,8 @@
     trainer: "shiva"
   tasks:
   - name: print information
-  vars:
-    course: "Devsecops with aiops"
-  debug:
-    msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+    vars:
+     course: "Devsecops with aiops"
+    debug:
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
