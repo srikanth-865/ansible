@@ -1,0 +1,10 @@
+- name: Demo on conditions
+  hosts: local
+  connection: local
+  vars:
+   live_session: 6
+  tasks:
+  - name: is ansible more than 5 sessions
+    debug:
+      msg: "yes ansible is more than 5 sessions"
+    when: when live_session > 5
