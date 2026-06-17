@@ -1,0 +1,11 @@
+- name: Demo on loops
+  hosts: local
+  connection: local
+  tasks:
+   - name: printing names
+     debug:
+       msg: "Hi {{ item }}"  # item keyword is used for refer the loop items print
+     loop: 
+     - ramesh 
+     - suresh
+     - mukesk

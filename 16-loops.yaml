@@ -1,0 +1,13 @@
+- name: Demo on installing & delete packages 
+  hosts: local
+  connection: local
+  become: root
+  tasks:
+  - name: install & delete package based on requirement
+    package:
+      name: "{{ item.name }}" # we cann access through the variables
+      state: "{{ item.state }}"
+    loop:
+    - { name: "mysql" , state: "present" }  #map data stored multipe values
+    - { name: "git" , state: "absent"}
+    - { name: "mongodb", state: "present"}

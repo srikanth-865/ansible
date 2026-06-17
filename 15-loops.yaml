@@ -1,0 +1,14 @@
+- name: Demo on installing packages
+  hosts: local
+  connection: local
+  become: root
+  tasks:
+  - name: installing the packages
+    package: 
+      name: "{{ item }}""  #within the loop whatevr we passed it will execute one by one
+      state: present
+    loop:
+    - mysql
+    - mongodb-mongosh
+    - nginx
+    - git
