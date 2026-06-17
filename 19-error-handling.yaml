@@ -7,4 +7,4 @@
     register: user_output
     ignore_errors: true
   - debug:
-     msg: "{{ useroutput }}"
+     msg: "{{ user_output }}"
