@@ -3,8 +3,7 @@
   connection: local
   tasks:
   - name: printing the shell command 
-    shell: cat etc/password | grep root
+    shell: cat etc/passwd | grep root
     register: user_output
-  - name: printing output of succes code
     debug:
        msg: "{{ user_output }}"
