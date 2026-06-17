@@ -5,5 +5,5 @@
   - name: printing the shell command 
     shell: cat etc/passwd | grep root
     register: user_output
-    debug:
+  - debug:
        msg: "{{ user_output }}"
