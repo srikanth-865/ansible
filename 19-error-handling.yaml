@@ -4,3 +4,7 @@
   tasks:
   - name: Checking the roboshop is present or not
     command: id Roboshop
+    register: user_output
+    ignore_errors: true
+  - debug:
+     msg: "{{ useroutput }}"
