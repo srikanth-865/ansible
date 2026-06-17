@@ -4,9 +4,9 @@
   vars:
     topics: linux, shell, ansible, terraform
   taskmap:
-    name: "ansible"
-    project: "Roboshop"
-    environment: "Devops"
+    name: ansible
+    project: Roboshop
+    environment: Devops
   tasks:
   - name: convert string to list
     debug:
