@@ -2,8 +2,9 @@
   hosts: local
   connection: local
   tasks:
-   - name: printing the shell command 
-     shell: cat etc/password | grep root
-     register: user_output
-     debug:
+  - name: printing the shell command 
+    shell: cat etc/password | grep root
+    register: user_output
+  - name: printing output of succes code
+    debug:
        msg: "{{ user_output }}"
