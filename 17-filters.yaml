@@ -14,5 +14,6 @@
   - name: printing undefined value 
     debug:
      msg: "{{ Greeting | default('Srikanth') }}"
+  - name: convert map to list
     debug:
-     msg: "{{ taskmap | dic2items}}"
+     msg: "{{ tagmap | dic2items}}"
