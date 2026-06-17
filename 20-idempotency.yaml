@@ -1,0 +1,8 @@
+- name: Demo on error handling
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: adding user by using command(user)inbuilt
+    user:
+     name: expense #its like useradd expense
