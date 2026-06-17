@@ -7,6 +7,7 @@
      name: ansible
      project: Roboshop
      environment: Devops
+    ip_address:100.34.65783.
   tasks:
   - name: convert string to list
     debug:
@@ -17,4 +18,8 @@
   - name: convert map to list
     debug:
      msg: "{{ tagmap | dict2items }}"
+
+  - name: checking ip ip_address
+    debug:
+     msg: " ipaddress is {{ip_address | ansible.utils.ipv4 }} "
   
