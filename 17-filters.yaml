@@ -7,3 +7,6 @@
   - name: convert string to list
     debug:
      msg: "{{ topics | split(',')}}"
+  - name: printing undefined value 
+    debug:
+     msg: "{{ Greeting | default('Srikanth') }}"
