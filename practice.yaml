@@ -1,12 +1,10 @@
-
-- name: Demo on loops
+- name: Demo on prompt
   hosts: localhost
   connection: local
   tasks:
-   - name: printing names
+   - name: print loop names
      debug:
-       msg: "Hi {{ item }}"  # item keyword is used for refer the loop items print
-     loop: 
-      - ramesh 
-      - suresh
-      - mukesk
+       msg: "{{ item }}"
+     loop:
+      - linux
+      - redhat
