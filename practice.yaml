@@ -2,10 +2,13 @@
   hosts: localhost
   connection: local
   vars:
-   session: 6
+    num: 2
   tasks:
-  - name: cheching ansible sessions
-    when: session > 5
-    debug:
-     msg: " yeah it take 3 more sess"
-     
+   - name: check even or odd
+     when: num%2 == 0
+     debug:
+      msg: "give no is even {{ num }}"
+   - name: check even or odd
+     when: num%2! == 0
+     debug:
+      msg: "give no is odd {{ num }}"
