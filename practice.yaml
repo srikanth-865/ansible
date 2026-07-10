@@ -2,12 +2,12 @@
   hosts: localhost
   connection: local
   tasks:
-  - name: installing package
-    package:
-      name: nginx
-      state: present
-  - name: start nginx
+   - name: install package
+     package:
+     name: nginx
+     state: present
+  - name: serivce start
     service:
-    - name: nginx
-      state: started
-      enabled: yes
+    name: nginx
+    state: started
+    enabled: yes
