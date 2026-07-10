@@ -11,5 +11,6 @@
      name: "sreedhar"
      age: 20
      place: "devamada"
+     name: printing informaiton
     debug:
        msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
