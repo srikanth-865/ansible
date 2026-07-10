@@ -5,7 +5,7 @@
    session: 4
   tasks:
   - name: cheching ansible sessions
-    when session > 5
+    when: session > 5
     debug:
      msg: " yeah it take 3 more sess"
      
