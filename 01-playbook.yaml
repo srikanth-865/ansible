@@ -2,6 +2,6 @@
   hosts: localhost
   connection: local
   tasks:
-   - name:cheching the connectivity ping localhost
-     ping
+   - name: cheching the connectivity ping localhost
+     ping:
   
