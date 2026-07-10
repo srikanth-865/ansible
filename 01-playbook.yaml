@@ -1,7 +1,7 @@
 - name: ping the server
   hosts: localhost
   connection: local
-  tasks: cheching the connectivity
-   - name:
-     ping
+  tasks:
+   - name:cheching the connectivity ping localhost
+     ping:
   
