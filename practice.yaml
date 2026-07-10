@@ -4,6 +4,6 @@
   tasks:
    - name: printing the inventiry file local group variables
      debug:
-       msg: " course name is {{ course }} trainer is {{ trainer }} time is {{ time }}"
+       msg: " course name is {{ course }} trainer is {{ trainer }} time is {{ time }} common key is {{ common_key }}"
   
 
