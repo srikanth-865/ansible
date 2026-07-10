@@ -5,4 +5,4 @@
    - course.yaml
   tasks:
    debug:
-    msg:  " i am learning {{ course }}", time is {{ time }}, trainer is {{ trainer }}""
+    msg:  " i am learning {{ course }}" time is {{ time }} trainer is {{ trainer }}"
