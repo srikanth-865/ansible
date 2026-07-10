@@ -4,7 +4,13 @@
   tasks:
    - name: print loop names
      debug:
-      msg: "{{ item }}""
+       msg: "{{ item }}""
      loop:
       - linux
       - redhat
+
+
+
+
+
+
