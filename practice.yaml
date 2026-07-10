@@ -11,6 +11,5 @@
      name: "sreedhar"
      age: 20
      place: "devamada"
-  - name: taking variables 
     debug:
        msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
