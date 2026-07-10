@@ -3,13 +3,13 @@
   connection: local
   become: yes
   tasks:
-  - name: installing multiple packages
-    debug:
-      msg: "{{ item.name }}"
-      msg: "{{ item.state }}"
+  - name: installing multiple  packages
+    package:
+      name: "{{ item.name }}"
+      state: "{{  item.state }}"
     loop:
-      - { name: "nginx" , state: "present" }
-      - { name: "mysql" , state: "notthere" }
-      - { name: "zip" , state: "absent" }
-      
+      - { name: "nginx", state: "present"}
+      - { name: "mysql", state: "absent"}
+      - { name: "ansible", state: "present"}
+  
     
