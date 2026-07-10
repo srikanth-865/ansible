@@ -1,7 +1,7 @@
 - name: Demo on variables
   hosts: localhost
   connection: local
-  vars:
+  vars: # we are giving right side so ansible consider its vars related information 
     course: "Devops"
     time: 2
     trainer: "shiva"

@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   vars:
-    topics: linux, shell, ansible, terraform #list
-    tagmap:                       #map
+    topics: linux, shell, ansible, terraform   #list of values
+    tagmap:                       #map having inside key values
      name: ansible
      project: Roboshop
      environment: Devops
@@ -11,13 +11,13 @@
   tasks:
   - name: convert string to list
     debug:
-     msg: "{{ topics | split(',')}}"
+     msg: "{{ topics | split(',')}}"   # we get output [linux, shell, ansible, terraform ]
   - name: printing undefined value 
     debug:
      msg: "{{ Greeting | default('Srikanth') }}"
   - name: convert map to list
     debug:
-     msg: "{{ tagmap | dict2items }}"
+     msg: "{{ tagmap | dict2items }}" 
 
   - name: checking ip ip_address
     debug:

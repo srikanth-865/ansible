@@ -1,13 +1,13 @@
-- name: Demo on prompt
+- name: Demo on prompt 
   hosts: local
   connection: local
   vars_prompt:
   - name: username
     prompt: "please enter username"
-    private: false 
+    private: false  # it will be visible on termainal
   - name: password
     prompt: "please enter password"
-    private: true 
+    private: true   #it will  be not visible on terminal 
   tasks:
   - name: print the information
     debug:

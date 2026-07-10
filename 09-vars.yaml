@@ -4,4 +4,4 @@
   tasks:
   - name: print name
     debug:
-      msg: "hello {{ name }}"
+      msg: "hello {{ name }}" #in cmd line i give name so i use  => (-e) "srikanth"

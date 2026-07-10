@@ -1,12 +1,12 @@
 - name: install and start nginx
   hosts: frontend
   become: yes 
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
+  tasks:  # task having one2 list of task so we give -
+  - name: install nginx  # its 1 list of task 
+    ansible.builtin.package: # package also works
       name: nginx
       state: present
-  - name: start nginx
+  - name: start nginx  # its 2 list of task 
     service:
       name: nginx
       state: started

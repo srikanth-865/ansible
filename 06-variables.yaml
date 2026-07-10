@@ -1,4 +1,4 @@
-- name: Demo on variables with common file
+- name: Demo on variables with courese file on same directory
   hosts: local
   connection: local
   vars_files:

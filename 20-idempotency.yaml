@@ -4,5 +4,5 @@
   become: yes
   tasks:
   - name: adding user by using command(user)inbuilt
-    user:
+    user:  #its a command to add user 
      name: expense #its like useradd expense

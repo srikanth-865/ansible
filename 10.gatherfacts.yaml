@@ -3,4 +3,4 @@
   tasks:
   - name: Printing gathering information
     debug:
-      msg: " {{ansible_facts}}"
+      msg: " {{ansible_facts}}" # we can getting like os based on our AMI by this ansible run commands

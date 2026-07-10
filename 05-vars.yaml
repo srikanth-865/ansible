@@ -7,7 +7,7 @@
     trainer: "shiva"
   tasks:
   - vars:
-     course: "Devsecops with aiops"
+     course: "Devsecops with aiops"  ## for this ansible is try to get task level variables only
     debug:
      msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
 
