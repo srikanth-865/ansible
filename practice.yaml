@@ -8,4 +8,4 @@
   tasks:
   - name: taking variables 
     debug:
-     msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
+    msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
