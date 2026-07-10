@@ -9,5 +9,5 @@
    - name: serivce start
      service:
       name: nginx
-      state: started
+      state: stop
       enabled: yes
