@@ -9,6 +9,6 @@
      debug:
       msg: "give no is even {{ num }}"
    - name: check even or odd
-     when: num%2! == 0
+     when: num%2 != 0
      debug:
       msg: "give no is odd {{ num }}"
