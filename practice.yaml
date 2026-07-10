@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-   family: "ansible_facts.os_family"
+   family: ansible_facts.os_family
   tasks:
    - name: 
      when: family == "RedHat"
