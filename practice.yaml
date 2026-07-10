@@ -1,15 +1,9 @@
 - name: Demo on prompt
-  hosts: localhost
+  hosts: local
   connection: local
-  vars_prompt:  
-   - name: username
-     prompt: "please enter your name"
-     private: false
-   - name: password
-     prompt: please eneter your password
-     private: true
   tasks:
-   - debug:
-       msg: "username is {{ username }} password is {{ password }}"
-
+   - name: printing the inventiry file local group variables
+     debug:
+       msg: " course name is {{ course }} trainer is {{ trainer }} time is {{ time }}
+  
 
