@@ -1,12 +1,15 @@
 - name: Demo on prompt
   hosts: localhost
   connection: local
-  variable_prompt:
-  - prompt: username
-    private: true
+  vars_prompt:  
+   - name: username
+     prompt: "please enter your name"
+     private: false
+   - name: password
+     prompt: please eneter your password
+     private: true
   tasks:
    - debug:
-      msg: "username is {{ username }}"
-
+       msg: "username is {{ username }} password is {{ password }}"
 
 

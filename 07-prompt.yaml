@@ -1,9 +1,9 @@
 - name: Demo on prompt 
   hosts: local
   connection: local
-  vars_prompt:
+  vars_prompt:  #playkeyword inbuilt
   - name: username
-    prompt: "please enter username"
+    prompt: "please enter username"  # prompt is paramater inbuilt
     private: false  # it will be visible on termainal
   - name: password
     prompt: "please enter password"
@@ -12,3 +12,6 @@
   - name: print the information
     debug:
       msg: "username is: {{ username }} and password is :{{ password }}"
+
+
+
