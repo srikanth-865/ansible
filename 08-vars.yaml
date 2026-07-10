@@ -1,4 +1,4 @@
-- name: Demo on inventory vars file
+- name: Demo on inventory vars file by accesing groupvars variables
   hosts: local
   #connection: local
   tasks:
@@ -8,3 +8,110 @@
   
   # if we run variables by taking inventory.ini file so we run command in terminal as
   #ansible-playbook -i inventory 08-vars.yaml
+
+
+
+# if i want acces by groupvars dircettory files the file name and inventory hosts name should be same'?
+
+# Yes, exactly! ✅ That's the rule.
+
+# When using group_vars, Ansible matches the group name in the inventory with the filename inside group_vars.
+
+# Example 1
+
+# inventory.ini
+
+# [local]
+# localhost
+
+# Directory
+
+# group_vars/
+# ├── local.yaml
+# └── all.yaml
+
+# Since the group is local, Ansible automatically loads:
+
+# ✅ group_vars/local.yaml
+# ✅ group_vars/all.yaml
+
+# Example 2
+
+# inventory.ini
+
+# [frontend]
+# 172.31.25.149
+
+# Directory
+
+# group_vars/
+# ├── frontend.yaml
+# └── all.yaml
+
+# Ansible automatically loads:
+
+# ✅ group_vars/frontend.yaml
+# ✅ group_vars/all.yaml
+# Example 3
+
+# inventory.ini
+
+# [webservers]
+# server1
+# server2
+
+# Directory
+
+# group_vars/
+# ├── webservers.yaml
+# └── all.yaml
+
+# Ansible automatically loads:
+
+# ✅ group_vars/webservers.yaml
+# ✅ group_vars/all.yaml
+# Important point
+
+# The filename must match the group name, not the host name.
+
+# Example:
+
+# [local]
+# localhost
+
+# Here:
+
+# Group name = local
+# Host name = localhost
+
+# So the file must be:
+
+# group_vars/local.yaml
+
+# ❌ Not:
+
+# group_vars/localhost.yaml
+
+# unless your inventory group is actually named localhost.
+
+# Easy formula to remember
+# Inventory Group Name
+#         ↓
+# group_vars/<group_name>.yaml
+
+# Examples:
+
+# Inventory group	File name
+# [local]	group_vars/local.yaml
+# [frontend]	group_vars/frontend.yaml
+# [backend]	group_vars/backend.yaml
+# [db]	group_vars/db.yaml
+# Special file: all.yaml
+
+# group_vars/all.yaml is special.
+
+# It is loaded for every host and every group, so you don't need a matching group name for it.
+
+# So your understanding is correct:
+
+# Ansible looks at the inventory group name and loads the group_vars file with the same name.
