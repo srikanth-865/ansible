@@ -1,5 +1,5 @@
 - name: Demo on prompt
-  hosts: localhost
+  hosts: local
   connection: local
   tasks:
    - name: printing the inventiry file local group variables
