@@ -1,13 +1,11 @@
-- name: install nginx
+- name: Demo on variable
   hosts: localhost
   connection: local
+  vars:
+   name: "srikanth"
+   age: 20
+   place: "kurnool"
   tasks:
-   - name: install package
-     package:
-      name: nginx
-      state: present
-   - name: serivce start
-     service:
-      name: nginx
-      state: stop
-      enabled: yes
+  - name: taking variables 
+    debug:
+     -msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
