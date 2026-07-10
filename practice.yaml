@@ -1,6 +1,6 @@
 - name: Demo on prompt
   hosts: local
-  connection: local
+  #connection: local
   tasks:
    - name: printing the inventiry file local group variables
      debug:
