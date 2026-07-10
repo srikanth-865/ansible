@@ -2,8 +2,11 @@
   hosts: localhost
   connection: local
   variable_prompt:
-    prompt:
+    prompt: username
     private: true
+  tasks:
+   - debug:
+      msg: "username is {{ username }}"
 
 
 
