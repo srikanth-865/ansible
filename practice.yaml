@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   variable_prompt:
-    prompt: username
+  - prompt: username
     private: true
   tasks:
    - debug:
