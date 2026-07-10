@@ -6,6 +6,6 @@
      debug:
        msg: "Hi {{ item }}"  # item keyword is used for refer the loop items print
      loop: 
-     - ramesh 
-     - suresh
-     - mukesk
+      - ramesh 
+      - suresh
+      - mukesk
