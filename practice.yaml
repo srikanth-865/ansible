@@ -1,8 +1,11 @@
 - name: Demo on prompt
   hosts: localhost
   connection: local
+  vars:
+   session: 4
   tasks:
-   - name: print variable at run time
-     debug:
-       msg: "Hello {{ s }}"
-
+  - name: cheching ansible sessions
+    when session > 5
+    debug:
+     msg: " yeah it take 3 more sess"
+     
