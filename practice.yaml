@@ -6,6 +6,7 @@
   - name: installing multiple packages
     debug:
       msg: "{{ item.name }}"
+      msg: "{{ item.state }}"
     loop:
       - { name: "nginx" , state: "present" }
       - { name: "mysql" , state: "notthere" }
