@@ -6,10 +6,11 @@
    age: 20
    place: "kurnool"
   tasks:
-   vars:
+  - name: printing task levele variables
+    vars:
      name: "sreedhar"
      age: 20
      place: "devamada"
-  - name: taking variables 
+   - name: taking variables 
      debug:
        msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
