@@ -1,5 +1,9 @@
 - name: Demo on prompt
   hosts: localhost
   connection: local
-  prompt:
-  - private: true
+  variable_prompt:
+    prompt:
+    private: true
+
+
+
