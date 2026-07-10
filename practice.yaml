@@ -1,16 +1,8 @@
 - name: Demo on variable
   hosts: localhost
   connection: local
-  vars:
-   name: "srikanth"
-   age: 20
-   place: "kurnool"
+  vars_files:
+   - course.yaml
   tasks:
-  - name: printing task levele variables
-    vars:
-     name: "sreedhar"
-     age: 20
-     place: "devamada"
-     name: printing informaiton
-    debug:
-       msg: my name is {{ name }}, age is {{ age }}, from{{ place }}
+   debug:
+    msg:  " i am learning {{ course }}", time is {{ time }}, trainer is {{ trainer }}""
