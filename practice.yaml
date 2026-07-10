@@ -1,8 +1,13 @@
-- name: Demo on variable
+- name: Demo on prompt
   hosts: localhost
   connection: local
-  vars_files:
-   - course.yaml
+  vars_prompt:
+   - name: username
+     prompt: "please enter your name"
+     private: false
+   - name: password
+     prompt: please eneter your password
+     private: true
   tasks:
    - debug:
-      msg:  "i am learning {{ course }} time is {{ time }} trainer is {{ trainer }}"
+       msg: "username is {{ username}} password is {{ password }}"
