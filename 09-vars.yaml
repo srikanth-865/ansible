@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - name: print name
+  - name: print variable at run time using variable passing in msg {{name}}
     debug:
       msg: "hello {{ name }}" #in cmd line i give name so i use  => (-e) "srikanth"
