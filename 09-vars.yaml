@@ -4,4 +4,6 @@
   tasks:
   - name: print variable at run time using variable passing in msg {{name}}
     debug:
-      msg: "hello {{ name }}" #in cmd line i give name so i use  => (-e) "srikanth"
+      msg: "hello {{ name }}"  
+
+      # we runansible-playbook -e name ="srikanth"  09-varsyaml
