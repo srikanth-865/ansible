@@ -2,11 +2,8 @@
   hosts: localhost
   connection: local
   tasks:
-   - name: 
-     when: ansible_facts.os_family == "RedHat"
-     debug:
-       msg: "dnf"
-   - name: 
-     when: ansible_facts.os_family == "ubantu"
-     debug:
-       msg: "aptget"
+   debug:
+    msg: {{ item }}
+  loop:
+   - linux
+   - redhat

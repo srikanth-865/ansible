@@ -11,3 +11,4 @@
     debug:
      msg: " Os family is Redhat ,package manager is apt.get"
     
+    #ansible_facts is a reserved special variable — Ansible fills it automatically, you just use it.
