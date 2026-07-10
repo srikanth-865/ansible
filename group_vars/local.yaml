@@ -1,0 +1,4 @@
+common_key: common_value 
+course: "ansible from group_vars "
+trainer: "shiva"
+time: "2hrs" 
