@@ -3,5 +3,5 @@
   connection: local
   tasks:
    - name:cheching the connectivity ping localhost
-     ping:
+     ping
   
