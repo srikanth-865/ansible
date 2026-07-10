@@ -1,7 +1,14 @@
 - name: Demo on prompt
   hosts: localhost
   connection: local
+  vars:
+   family: "ansible_facts.os_family"
   tasks:
-   - name: print facts
+   - name: 
+     when: family == "RedHat"
      debug:
-       msg: "{{ ansible_facts }}"
+       msg: "dnf"
+   - name: 
+     when: family == "ubantu"
+     debug:
+       msg: "aptget"
