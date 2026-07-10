@@ -2,8 +2,7 @@
   hosts: local
   connection: local
   tasks:
-   - name: printing the inventiry file local group variables
+   - name: print variable 
      debug:
-       msg: " course name is {{ course }} trainer is {{ trainer }} time is {{ time }} common key is {{ common_variable }}"
-  
+       msg: "Hello {{ variable }}"
 
