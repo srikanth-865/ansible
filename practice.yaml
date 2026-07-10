@@ -2,8 +2,9 @@
   hosts: localhost
   connection: local
   tasks:
-   debug:
-    msg: "{{ item }}""
-  loop:
-   - linux
-   - redhat
+   - name: print loop names
+     debug:
+      msg: "{{ item }}""
+     loop:
+      - linux
+      - redhat
