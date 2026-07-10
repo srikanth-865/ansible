@@ -3,13 +3,6 @@
   connection: local
   become: yes
   tasks:
-  - name: installing multiple  packages
-    package:
-      name: "{{ name.item }}"
-      state: "{{  item.state }}"
-    loop:
-      - { name: "nginx", state: "present"}
-      - { name: "mysql", state: "absent"}
-      - { name: "ansible", state: "present"}
-  
-    
+  - name: printing undefined value 
+    debug:
+     msg: "{{ Greeting | default('Srikanth') }}"

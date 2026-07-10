@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    topics: linux, shell, ansible, terraform   #list of values
+    topics: linux, shell, ansible, terraform   #it is string
     tagmap:                       #map having inside key values
      name: ansible
      project: Roboshop
@@ -14,10 +14,10 @@
      msg: "{{ topics | split(',')}}"   # we get output [linux, shell, ansible, terraform ]
   - name: printing undefined value 
     debug:
-     msg: "{{ Greeting | default('Srikanth') }}"
+     msg: "{{ Greeting | default('Srikanth') }}"  
   - name: convert map to list
     debug:
-     msg: "{{ tagmap | dict2items }}" 
+     msg: "{{ tagmap | dict2items }}"   #we get output [ansible,Roboshop,Devops]
 
   - name: checking ip ip_address
     debug:
