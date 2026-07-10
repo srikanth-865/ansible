@@ -1,7 +1,10 @@
 - name: Demo on inventory vars file
-  hosts: frontend
+  hosts: local
   #connection: local
   tasks:
   - name: print information
     debug:
-     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}},common_key {{ common_key}}" 
+     msg: "myself srikanth learning {{course}} with trainer {{trainer}} hours is in{{time}}"
+  
+  # if we run variables by taking inventory.ini file so we run command in terminal as
+  #ansible-playbook -i inventory 08-vars.yaml
