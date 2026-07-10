@@ -8,9 +8,8 @@
       name: "{{ item.name }}"
       state: "{{item.state }}"
      loop:
-      - { name= "Rhel" , state="present"}
-      - { name= "os" , state="present"}
-      - { name= "lin" , state="present"}
-      - { name= "Rhel" , state="present"}
+      - { name:"Rhel" , state:"present"}
+      - { name:"sk" , state:"notthere"}
+      - { name:"sui" , state:"absent"}
       
     
