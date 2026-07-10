@@ -5,7 +5,7 @@
   tasks:
   - name: installing multiple  packages
     package:
-      name: "{{ item.name }}"
+      name: "{{ name.item }}"
       state: "{{  item.state }}"
     loop:
       - { name: "nginx", state: "present"}
