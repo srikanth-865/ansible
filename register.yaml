@@ -1,0 +1,13 @@
+- name: Demo on register 
+  hosts: localhost
+  connection: local
+  vars:
+   a=3
+   b=5
+  tasks:
+   - name: adding numbers and take output by register 
+     sum=a+b
+     register: user_output  
+     debug:
+      msg: "{{ user_output }}"
+   
