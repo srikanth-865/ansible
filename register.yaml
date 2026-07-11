@@ -3,7 +3,7 @@
   connection: local 
   tasks:
    - name: run command and capture output 
-     shell: cat /etc/passwd | grep root
+     shell:  ls -ltr 
      register: user_output  
    - name: Printing user output
      debug:
