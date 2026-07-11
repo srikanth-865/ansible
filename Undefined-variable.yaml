@@ -1,8 +1,8 @@
-- name: Demo on prompt
+- name: Demo on Undefined variable
   hosts: localhost
   connection: local
   become: yes
   tasks:
   - name: printing undefined value 
     debug:
-     msg: "{{ Greeting | default('Srikanth') }}"
+     msg: "{{ default('Srikanth') }}"
