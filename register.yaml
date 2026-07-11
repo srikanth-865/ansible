@@ -1,5 +1,5 @@
  - name: Demo on shell vs command
-   hosts: local
+   hosts: localhost
    connection: local
    tasks:
    - name: printing the shell command 
