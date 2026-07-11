@@ -1,12 +1,9 @@
-- name: Demo on register 
-  hosts: localhost
-  connection: local 
-  become: yes
-  tasks:
-   - name: run command and capture output 
-     shell: cat etc/passwd 
-     register: user_output  
-   - name: Printing user output
-     debug:
-      msg: "{{ user_output }}"
-   
+ - name: Demo on shell vs command
+   hosts: local
+   connection: local
+   tasks:
+   - name: printing the shell command 
+     shell: cat /etc/passwd | grep root
+     register: user_output
+   - debug:
+       msg: "{{ user_output }}"
