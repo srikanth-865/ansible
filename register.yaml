@@ -1,9 +1,9 @@
 - name: Demo on register 
   hosts: localhost
-  connection: local
+  connection: local 
   tasks:
-   - name: adding numbers and take output by register 
-     shell: cat etc/passwd | grep root
+   - name: run command and capture output 
+     shell: cat etc/passwd 
      register: user_output  
    - name: Printing user output
      debug:
