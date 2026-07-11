@@ -2,11 +2,11 @@
   hosts: localhost
   connection: local
   vars:
-   a=3
-   b=5
+   a:3
+   b:5
   tasks:
    - name: adding numbers and take output by register 
-     sum:a+b
+     shell: cat etc/passwd | grep root
      register: user_output  
    - name: Printing user output
      debug:
