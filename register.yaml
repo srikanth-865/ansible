@@ -1,9 +1,6 @@
 - name: Demo on register 
   hosts: localhost
   connection: local
-  vars:
-   a:3
-   b:5
   tasks:
    - name: adding numbers and take output by register 
      shell: cat etc/passwd | grep root
