@@ -5,4 +5,4 @@
   tasks:
   - name: printing undefined value 
     debug:
-     msg: "{{ default('Srikanth') }}"
+     msg: "{{ Greet | default('Srikanth') }}"
