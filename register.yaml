@@ -5,7 +5,86 @@
    - name: run command and capture output 
      shell:  ls -ltr 
      register: user_output  
-   - name: Printing user output
-     debug:
+   - debug:
       msg: "{{ user_output }}"
    
+
+
+
+
+#    your playbook:
+
+# - name: Demo on register
+#   hosts: localhost
+#   connection: local
+#   tasks:
+#     - name: run command and capture output
+#       shell: ls -ltr
+#       register: user_output
+#       debug:
+#         msg: "{{ user_output }}"
+# Error
+
+# debug is written inside the same task as shell.
+
+# A task can execute only one module. Here you're trying to use two modules in the same task:
+
+# shell ✅
+# debug ❌ (inside the same task)
+
+# Ansible will give an error similar to:
+
+# ERROR! conflicting action statements: shell, debug
+# Correct way
+
+# Create a separate task for debug:
+
+# ---
+# - name: Demo on register
+#   hosts: localhost
+#   connection: local
+
+#   tasks:
+#     - name: Run command and capture output
+#       shell: ls -ltr
+#       register: user_output
+
+#     - name: Print registered output
+#       debug:
+#         msg: "{{ user_output }}"
+
+# Or, if you only want to print the command output:
+
+# ---
+# - name: Demo on register
+#   hosts: localhost
+#   connection: local
+
+#   tasks:
+#     - name: Run command and capture output
+#       shell: ls -ltr
+#       register: user_output
+
+#     - name: Print stdout
+#       debug:
+#         msg: "{{ user_output.stdout }}"
+# Why?
+
+# Think of a task like this:
+
+# Task 1
+#  └── Module: shell
+
+# Task 2
+#  └── Module: debug
+
+# Each task can have:
+
+# One module (shell, command, debug, copy, etc.)
+# Optional keywords like register, when, become, ignore_errors, etc.
+
+# It cannot have two modules (shell and debug) in the same task.
+
+# This is a fundamental Ansible rule:
+
+# One task = One module.

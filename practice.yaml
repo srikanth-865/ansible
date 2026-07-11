@@ -1,0 +1,15 @@
+- name: Demo on ignore error
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: Check user is there or not
+     command: id roboshop
+     register: output
+     ignore_errors: true
+   - name: Creating user
+     when: output != 0
+     command: useradd roboshop
+     register: user_output
+   - name: print the informaiton of user
+     debug:
+      msg: "{{ user_output }}""

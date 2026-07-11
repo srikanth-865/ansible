@@ -6,11 +6,10 @@
   - name: Checking the roboshop is present or not
     command: id Roboshop
     register: user_output
-    ignore_errors: true   # it will ignore  erroe even if we dont create user
+    ignore_errors: true   # it will ignore  error even if we dont create user not present also
   - name: print useroutput
     debug:
       msg: "{{ user_output }}"
-
   - name: Creating a User
     command: useradd roboshop
     when: user_output.rc != 0
