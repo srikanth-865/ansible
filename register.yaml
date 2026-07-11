@@ -1,6 +1,7 @@
 - name: Demo on register 
   hosts: localhost
   connection: local 
+  become: yes
   tasks:
    - name: run command and capture output 
      shell: cat etc/passwd 
